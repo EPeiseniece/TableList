@@ -37,7 +37,7 @@ class MusicTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -93,7 +93,8 @@ class MusicTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let currentTrack = songs.remove(at: fromIndexPath.row)
+        songs.insert(currentTrack, at: to.row)
     }
   
 
@@ -105,6 +106,10 @@ class MusicTableViewController: UITableViewController {
     }
     */
 
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return.none
+    }
+    
     
     // MARK: - Navigation
 
