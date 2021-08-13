@@ -8,6 +8,10 @@
 import UIKit
 
 class MovieTableViewController: UITableViewController {
+    
+    var movies = Movie.createMovie()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +29,20 @@ class MovieTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return movies.count
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {return UITableViewCell()}
-
-        cell.movieLabel.text = "Jurassic Park 1"
-        cell.movieImageView.image = UIImage(named: "jp.jpg")
+        let movie = movies[indexPath.row]
         
-
+        
+        
+        cell.movieLabel.text = movie.movieName
+        cell.yearLabel.text = movie.movieYear
+        cell.movieImageView.image = UIImage(named: movie.poster)
+        
         return cell
     }
    

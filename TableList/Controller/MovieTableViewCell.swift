@@ -12,5 +12,5 @@ class MovieTableViewCell: UITableViewCell {
  
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieLabel: UILabel!
-    
+    @IBOutlet weak var yearLabel: UILabel!
 }
