@@ -3,26 +3,46 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Music List-->
         <scene sceneID="0uG-Hi-eY7">
             <objects>
-                <tableViewController id="bLJ-dQ-uyJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ugx-zf-0gv">
+                <tableViewController id="bLJ-dQ-uyJ" customClass="MusicTableViewController" customModule="TableList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ugx-zf-0gv" customClass="mu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gbo-rf-laY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" textLabel="NZ5-Ea-lWR" detailTextLabel="Ka9-qy-ckY" style="IBUITableViewCellStyleSubtitle" id="gbo-rf-laY">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gbo-rf-laY" id="sqN-4t-ilB">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NZ5-Ea-lWR">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ka9-qy-ckY">
+                                            <rect key="frame" x="20" y="22.5" width="30.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nj1-7V-6OJ" kind="show" id="PEl-rE-dIG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,16 +50,32 @@
                             <outlet property="delegate" destination="bLJ-dQ-uyJ" id="rEt-Hu-vaW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2yc-KY-rbl"/>
+                    <navigationItem key="navigationItem" title="Music List" id="2yc-KY-rbl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLu-jc-Q7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1894.2028985507247" y="23.4375"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller-->
+        <scene sceneID="SgD-cu-sBy">
+            <objects>
+                <viewController id="nj1-7V-6OJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aKV-54-c7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="58j-O0-brR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0wh-aU-aY4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmc-KD-7ge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630" y="23"/>
+        </scene>
+        <!--Movie List-->
         <scene sceneID="to9-XY-4Kc">
             <objects>
-                <tableViewController id="rpm-Dj-of2" sceneMemberID="viewController">
+                <tableViewController id="rpm-Dj-of2" customClass="MovieTableViewController" customModule="TableList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kwp-46-0Yu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +95,7 @@
                             <outlet property="delegate" destination="rpm-Dj-of2" id="BWm-gR-TuS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ely-LL-htQ"/>
+                    <navigationItem key="navigationItem" title="Movie List" id="Ely-LL-htQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJy-9c-NUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

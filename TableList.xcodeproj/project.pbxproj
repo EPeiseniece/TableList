@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		EA26053326C6907A00F8AE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26053226C6907A00F8AE48 /* AppDelegate.swift */; };
 		EA26053526C6907A00F8AE48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26053426C6907A00F8AE48 /* SceneDelegate.swift */; };
-		EA26053726C6907A00F8AE48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26053626C6907A00F8AE48 /* ViewController.swift */; };
 		EA26053A26C6907A00F8AE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA26053826C6907A00F8AE48 /* Main.storyboard */; };
 		EA26053C26C6908D00F8AE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26053B26C6908D00F8AE48 /* Assets.xcassets */; };
 		EA26053F26C6908D00F8AE48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA26053D26C6908D00F8AE48 /* LaunchScreen.storyboard */; };
+		EA26054B26C6939600F8AE48 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26054A26C6939600F8AE48 /* MusicTableViewController.swift */; };
+		EA26054D26C693AC00F8AE48 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */; };
+		EA26055226C698CD00F8AE48 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055126C698CD00F8AE48 /* Song.swift */; };
+		EA26055426C699E400F8AE48 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055326C699E400F8AE48 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA26052F26C6907A00F8AE48 /* TableList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26053226C6907A00F8AE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA26053426C6907A00F8AE48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA26053626C6907A00F8AE48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA26053926C6907A00F8AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA26053B26C6908D00F8AE48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA26053E26C6908D00F8AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA26054026C6908D00F8AE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA26054A26C6939600F8AE48 /* MusicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
+		EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		EA26055126C698CD00F8AE48 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		EA26055326C699E400F8AE48 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				EA26054626C6909A00F8AE48 /* AppDelegate */,
-				EA26054926C690CB00F8AE48 /* Model */,
+				EA26055026C698A600F8AE48 /* Model */,
 				EA26054726C690A400F8AE48 /* Controller */,
 				EA26054826C690B500F8AE48 /* View */,
 				EA26053B26C6908D00F8AE48 /* Assets.xcassets */,
@@ -78,7 +84,8 @@
 		EA26054726C690A400F8AE48 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA26053626C6907A00F8AE48 /* ViewController.swift */,
+				EA26054A26C6939600F8AE48 /* MusicTableViewController.swift */,
+				EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,11 +99,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EA26054926C690CB00F8AE48 /* Model */ = {
+		EA26055026C698A600F8AE48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA26055126C698CD00F8AE48 /* Song.swift */,
+				EA26055326C699E400F8AE48 /* DataManager.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA26053726C6907A00F8AE48 /* ViewController.swift in Sources */,
+				EA26054D26C693AC00F8AE48 /* MovieTableViewController.swift in Sources */,
+				EA26055426C699E400F8AE48 /* DataManager.swift in Sources */,
 				EA26053326C6907A00F8AE48 /* AppDelegate.swift in Sources */,
 				EA26053526C6907A00F8AE48 /* SceneDelegate.swift in Sources */,
+				EA26054B26C6939600F8AE48 /* MusicTableViewController.swift in Sources */,
+				EA26055226C698CD00F8AE48 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
