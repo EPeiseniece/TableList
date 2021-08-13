@@ -16,6 +16,7 @@
 		EA26054D26C693AC00F8AE48 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */; };
 		EA26055226C698CD00F8AE48 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055126C698CD00F8AE48 /* Song.swift */; };
 		EA26055426C699E400F8AE48 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055326C699E400F8AE48 /* DataManager.swift */; };
+		EA26055626C6A28F00F8AE48 /* DetailMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		EA26055126C698CD00F8AE48 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		EA26055326C699E400F8AE48 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				EA26054A26C6939600F8AE48 /* MusicTableViewController.swift */,
 				EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */,
+				EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				EA26053326C6907A00F8AE48 /* AppDelegate.swift in Sources */,
 				EA26053526C6907A00F8AE48 /* SceneDelegate.swift in Sources */,
 				EA26054B26C6939600F8AE48 /* MusicTableViewController.swift in Sources */,
+				EA26055626C6A28F00F8AE48 /* DetailMusicViewController.swift in Sources */,
 				EA26055226C698CD00F8AE48 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

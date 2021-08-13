@@ -61,11 +61,15 @@ class MusicTableViewController: UITableViewController {
         cell.detailTextLabel?.text = song.album
         cell.imageView?.image = UIImage(named: song.cover)
         
-        
         return cell
     }
     
-
+    // MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -86,12 +90,12 @@ class MusicTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
+  
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -101,14 +105,26 @@ class MusicTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     
+     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            
+        
         // Get the new view controller using segue.destination.
+            print(indexPath)
+            let detailVC = segue.destination as! DetailMusicViewController
         // Pass the selected object to the new view controller.
+            
+            detailVC.song = songs[indexPath.row]
+            
+        }
     }
-    */
+   
 
 }
