@@ -167,6 +167,7 @@
                                     <outlet property="movieImageView" destination="tbj-z9-pN4" id="uNV-jc-lZZ"/>
                                     <outlet property="movieLabel" destination="u3o-C2-dE1" id="tLs-tH-MI3"/>
                                     <outlet property="yearLabel" destination="htn-97-Ep9" id="dUa-PE-HnT"/>
+                                    <segue destination="06C-VO-eRQ" kind="show" id="yHQ-zK-EjE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -181,6 +182,54 @@
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="689.5052473763119"/>
         </scene>
+        <!--Detail Movie View Controller-->
+        <scene sceneID="zd2-tb-baZ">
+            <objects>
+                <viewController id="06C-VO-eRQ" customClass="DetailMovieViewController" customModule="TableList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huP-Xo-cAc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="RGO-ML-LgB">
+                                <rect key="frame" x="62.5" y="111" width="250" height="445"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRP-F2-p5D">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="psJ-D5-y8U"/>
+                                            <constraint firstAttribute="height" constant="350" id="z22-Nb-VB3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-02-vPi">
+                                        <rect key="frame" x="0.0" y="395" width="250" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="D5e-zy-Mlv"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ajc-PH-E1j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hYJ-pB-IWK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RGO-ML-LgB" firstAttribute="centerY" secondItem="huP-Xo-cAc" secondAttribute="centerY" id="5P3-32-7es"/>
+                            <constraint firstItem="RGO-ML-LgB" firstAttribute="centerX" secondItem="huP-Xo-cAc" secondAttribute="centerX" id="5mB-Pr-05l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="20f-vl-gd9"/>
+                    <connections>
+                        <outlet property="movieLabel" destination="0Uc-02-vPi" id="oL6-OH-ji7"/>
+                        <outlet property="moviePosterImage" destination="bRP-F2-p5D" id="hco-ye-oOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgX-9o-YEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="690"/>
+        </scene>
         <!--Music-->
         <scene sceneID="bkI-1i-G4j">
             <objects>
@@ -190,6 +239,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fDE-iJ-8Wn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2114962222" green="0.15336495110000001" blue="0.29089295180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.63515947449999999" green="0.57693020260000005" blue="0.73737124180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -207,7 +260,10 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kf8-I5-727">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.49178943577395395" green="0.32952674565703405" blue="0.78632009210557552" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.63515947449999999" green="0.57693020260000005" blue="0.73737124180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.21149622217999584" green="0.15336495109223794" blue="0.29089295176390584" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.63515947453520472" green="0.57693020260772654" blue="0.7373712417927194" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="eqd-nz-tBS" kind="relationship" relationship="viewControllers" id="d6o-oR-bYb"/>
@@ -227,6 +283,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hYO-fy-8fs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2114962222" green="0.15336495110000001" blue="0.29089295180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.63515947449999999" green="0.57693020260000005" blue="0.73737124180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

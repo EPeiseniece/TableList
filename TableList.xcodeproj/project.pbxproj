@@ -19,6 +19,7 @@
 		EA26055626C6A28F00F8AE48 /* DetailMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */; };
 		EA26055826C6B9F400F8AE48 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055726C6B9F400F8AE48 /* MovieTableViewCell.swift */; };
 		EA26055A26C6C98400F8AE48 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055926C6C98400F8AE48 /* Movie.swift */; };
+		EA26055C26C6CE7A00F8AE48 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26055B26C6CE7A00F8AE48 /* DetailMovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMusicViewController.swift; sourceTree = "<group>"; };
 		EA26055726C6B9F400F8AE48 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		EA26055926C6C98400F8AE48 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EA26055B26C6CE7A00F8AE48 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				EA26055526C6A28F00F8AE48 /* DetailMusicViewController.swift */,
 				EA26054C26C693AC00F8AE48 /* MovieTableViewController.swift */,
 				EA26055726C6B9F400F8AE48 /* MovieTableViewCell.swift */,
+				EA26055B26C6CE7A00F8AE48 /* DetailMovieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				EA26054B26C6939600F8AE48 /* MusicTableViewController.swift in Sources */,
 				EA26055626C6A28F00F8AE48 /* DetailMusicViewController.swift in Sources */,
 				EA26055826C6B9F400F8AE48 /* MovieTableViewCell.swift in Sources */,
+				EA26055C26C6CE7A00F8AE48 /* DetailMovieViewController.swift in Sources */,
 				EA26055226C698CD00F8AE48 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
